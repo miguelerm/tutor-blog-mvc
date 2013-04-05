@@ -30,7 +30,7 @@ namespace BlogApp.Controllers
         /// </returns>
         [HttpPost]
         [ActionName("Registrarse")]
-        public ActionResult RegistrarsePost(UsuarioModelo modelo)
+        public ActionResult RegistrarsePost(UsuarioRegistrarseModelo modelo)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,49 @@ namespace BlogApp.Controllers
             return View();
         }
 
+        [HttpPost]
+        public ActionResult Ingresar(UsuarioIngresarModelo modelo)
+        {
+            if (ModelState.IsValid)
+            {
 
+                var db = new BlogDb();
+
+                var existe = db.Usuarios.Any(x => 
+                    x.Nombre == modelo.Nombre && 
+                    x.Clave == modelo.Clave);
+
+                if (existe)
+                {
+
+                    System.Web.Security.FormsAuthentication.SetAuthCookie(modelo.Nombre, modelo.Recordarme);
+
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ModelState.AddModelError("nombre", "El usuario o la clave son incorrectas");
+                }
+
+
+            }
+
+            // Si llegamos hasta aca algo esta mal.
+            return View(modelo);
+        }
+
+        [Authorize]
+        public ActionResult CambiarClave()
+        {
+            return View();
+        }
+
+        [Authorize]
+        public ActionResult Salir()
+        {
+            System.Web.Security.FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Home");
+        }
 
     }
 }

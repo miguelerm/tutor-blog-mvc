@@ -18,5 +18,7 @@ namespace BlogApp.Models
         [DataType(DataType.Password)]
         public string Clave { get; set; }
 
+        public bool Recordarme { get; set; }
+        
     }
 }

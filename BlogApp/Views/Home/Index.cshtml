@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+@{Html.RenderPartial("_MensajeDelDia");}
+
+
+
+@if (User.Identity.IsAuthenticated)
+{
+    
+    <h2>Bienvenido @User.Identity.Name</h2>
+    <a href="/Usuarios/Salir">Cerrar Sesion</a>
+    <a href="/Usuarios/CambiarClave">Cambiar Clave</a>
+}
+else
+{
+    <h2>Bienvenido al sistema</h2>
+    <a href="/Usuarios/Ingresar">Iniciar Sesion</a>
+}
+
+@{Html.RenderAction("Index", "Menu");}
+
+@section HeadSection
+{
+    <meta name="keywords" content="index, inicio, etc." />
+}
+
+@section ScriptSection
+{
+    <script src="~/Scripts/home-index-script.js"></script>
+}

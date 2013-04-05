@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace BlogApp.Models
 {
-    public class UsuarioModelo
+    public class UsuarioRegistrarseModelo
     {
         [Required]
         [StringLength(10)]
