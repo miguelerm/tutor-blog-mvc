@@ -140,6 +140,7 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RegisterClientValidationExtensions.cs" />
+    <Compile Include="Controllers\CategoriasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MenuController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
@@ -161,7 +162,26 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Content\themes\basic\basic-style-colors.css" />
+    <Content Include="Content\themes\basic\font-awesome.css" />
+    <Content Include="Content\themes\basic\font\fontawesome-webfont.svg" />
+    <Content Include="Content\themes\basic\img\circle.png" />
+    <Content Include="Content\themes\basic\js\jquery.fitvids9d52.js" />
+    <Content Include="Content\themes\basic\js\jquery.flexslider9d52.js" />
+    <Content Include="Content\themes\basic\js\jquery.global9d52.js" />
+    <Content Include="Content\themes\basic\js\jquery.tweet9d52.js" />
+    <Content Include="Content\themes\basic\js\respond.min9d52.js" />
+    <Content Include="Content\themes\basic\basic-style.css" />
     <Content Include="Global.asax" />
+    <Content Include="Content\themes\basic\font\fontawesome-webfont-iefix.eot" />
+    <Content Include="Content\themes\basic\font\fontawesome-webfont.eot" />
+    <Content Include="Content\themes\basic\font\fontawesome-webfont.ttf" />
+    <Content Include="Content\themes\basic\font\fontawesome-webfont.woff" />
+    <Content Include="Views\Categorias\Index.cshtml" />
+    <Content Include="Views\Categorias\Details.cshtml" />
+    <Content Include="Views\Categorias\Create.cshtml" />
+    <Content Include="Views\Categorias\Edit.cshtml" />
+    <Content Include="Views\Categorias\Delete.cshtml" />
     <None Include="_bin_deployableAssemblies\x86\sqlcese40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceqp40.dll" />
     <None Include="_bin_deployableAssemblies\x86\sqlceme40.dll" />
@@ -179,7 +199,6 @@
     <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\README_ENU.txt" />
     <None Include="_bin_deployableAssemblies\amd64\Microsoft.VC90.CRT\msvcr90.dll" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
-    <Content Include="Scripts\home-index-script.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -189,6 +208,7 @@
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\main-script.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -213,6 +233,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\themes\basic\css\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

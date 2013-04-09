@@ -1,0 +1,25 @@
+﻿/** Colors */
+header nav ul li a, header nav ul li a:visited, header nav ul li.search { 
+	color: #AAA28D;
+}
+header nav ul li a:hover, header nav ul li.search:hover {
+	color: #FFFFFF;
+}
+a:hover {
+	color: #FC6341;
+}
+.highlight {
+	background: #FC6341;
+}
+button, .btn, .form-submit input { 
+	background: #FC6341;
+}
+::selection { background: #FC6341; color: #fff; }
+::-moz-selection { background: #FC6341; color: #fff; }
+
+body {
+	background: #EFEDE9;
+}
+section {
+	background: #FFFFFF;
+}

@@ -1,0 +1,43 @@
+﻿@model BlogApp.Entidades.Categoria
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<section class="post">
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Categoria</legend>
+
+        <p>
+            @Html.LabelFor(model => model.Nombre)
+            @Html.EditorFor(model => model.Nombre)
+            @Html.ValidationMessageFor(model => model.Nombre)
+        </p>
+
+        <p>
+            @Html.LabelFor(model => model.CategoriaPadreId, "CategoriaPadre")
+            @Html.DropDownList("CategoriaPadreId", String.Empty)
+            @Html.ValidationMessageFor(model => model.CategoriaPadreId)
+        </p>
+
+        <p>
+            <button type="submit">Create</button>
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn light" })
+</div>
+
+</section>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

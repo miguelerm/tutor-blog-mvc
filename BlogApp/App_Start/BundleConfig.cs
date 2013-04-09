@@ -18,8 +18,18 @@ namespace BlogApp
             appScripts.Include("~/Scripts/jquery.validate.js");
             appScripts.Include("~/Scripts/jquery.validate.unobtrusive.js");
             appScripts.Include("~/Scripts/jquery.unobtrusive-ajax.js");
+            appScripts.Include("~/Scripts/main-script.js");
+
+
+            var appStyles = new StyleBundle("~/Content/themes/basic/css");
+
+            appStyles.Include("~/Content/themes/basic/font-awesome.css");
+            appStyles.Include("~/Content/themes/basic/basic-style.css");
+            appStyles.Include("~/Content/themes/basic/basic-style-colors.css");
+
 
             bundles.Add(appScripts);
+            bundles.Add(appStyles);
 
         }
     }

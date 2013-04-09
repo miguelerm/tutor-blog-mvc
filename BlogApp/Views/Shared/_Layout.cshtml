@@ -1,15 +1,105 @@
 ﻿<!DOCTYPE html>
-<html>
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" lang="es-GT">
+<!--[if lt IE 7 ]><html class="ie ie6" lang="es-GT"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="es-GT"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="es-GT"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><html lang="es-GT"><![endif]-->
+
 <head>
+
+    <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
     <meta name="viewport" content="width=device-width" />
     <title>MvcBlog - @ViewBag.Title</title>
 
+    @Styles.Render("~/Content/themes/basic/css")
     @RenderSection("Styles", false)
 
 </head>
-<body>
+<body class="home blog">
     
+
+    <header>
+		
+		<div id="logo">
+            <h4 class="logo"><a href="@Url.Action("Index", "Home")">Mvc Blog</a></h4>
+		</div>
+		
+		<div class="menubutton"><i class="icon-reorder"></i></div>
+
+		<nav id="primary-nav" class="menu-main-container">
+            <ul id="menu-main" class="menu">
+                <li class="menu-item">
+                    <a href="@Url.Action("Index", "Home")">Inicio</a>
+                </li>
+                <li class="menu-item">
+                    <a href="@Url.Action("About", "Home")">Acerca de</a>
+                </li>
+                <li class="menu-item">
+                    <a href="@Url.Action("Archivo", "Blog")">Archivo</a>
+                </li>
+                <li class="menu-item">
+                    <a href="@Url.Action("Contacto", "Home")">Contacto</a>
+                </li>
+                <li class="search">
+                    <i class="icon-search"></i>
+                    <i class="icon-remove"></i>
+                </li>
+            </ul>
+            <div class="search_popup">
+			    <form action="@Url.Action("Search")" id="searchform" method="get">
+				    <input name="s" type="text" value="Search..." onfocus="if (this.value == 'Search...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Search...';}" />
+				    <button type="submit">Search</button>
+			    </form>
+		    </div>
+		</nav>
+		<br class="clear" />
+	</header>
+
     @RenderBody()
+
+
+    <footer>
+		<div class="slate">
+			<div class="four columns">
+				<div class="widget cf">
+                    <h5>Follow us on Twitter</h5>			
+		            <div class="tweet">
+		            </div>
+		        </div>
+			</div>
+			<div class="four columns">
+				<div class="widget cf">
+                    <h5>Basic</h5>
+                    <div class="textwidget">
+                        Texto de ejemplo para colocar en la base de la pagina.
+                    </div>
+		        </div>
+                <div class="widget cf">
+                    <a href="#" class="btn twitter"">
+                        <i class="icon-twitter"></i>
+                    </a>&nbsp; 
+                    <a href="#" class="btn facebook">
+                        <i class="icon-facebook"></i>
+                    </a>
+                    &nbsp; 
+                    <a href="#" class="btn linkedin">
+                        <i class="icon-linkedin"></i>
+                    </a>
+                    &nbsp; 
+                    <a href="#" class="btn google_plus">
+                        <i class="icon-google-plus"></i>
+                    </a>
+                    &nbsp; 
+                    <a href="#" class="btn pinterest">
+                        <i class="icon-pinterest"></i>
+                    </a>
+                    &nbsp;
+                </div>
+			</div>
+		</div>
+	</footer>
 
     @Scripts.Render("~/bundles/appscripts")
 
