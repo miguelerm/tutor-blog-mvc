@@ -4,32 +4,35 @@
     ViewBag.Title = "CambiarClave";
 }
 
-<h2>CambiarClave</h2>
+<section class="post">
+    <h2>CambiarClave</h2>
 
-@using (Html.BeginForm()) {
-    @Html.ValidationSummary(true)
+    @using (Html.BeginForm()) {
+        @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend>UsuarioCambioClaveModelo</legend>
+        <fieldset>
+            <legend>UsuarioCambioClaveModelo</legend>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Clave)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Clave)
-            @Html.ValidationMessageFor(model => model.Clave)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Clave)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Clave)
+                @Html.ValidationMessageFor(model => model.Clave)
+            </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Confirmacion)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Confirmacion)
-            @Html.ValidationMessageFor(model => model.Confirmacion)
-        </div>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.Confirmacion)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.Confirmacion)
+                @Html.ValidationMessageFor(model => model.Confirmacion)
+            </div>
 
-        <p>
-            <input type="submit" value="Cambiar Clave" />
-        </p>
-    </fieldset>
-}
+            <p>
+                <input type="submit" value="Cambiar Clave" />
+            </p>
+        </fieldset>
+    }
+
+</section>

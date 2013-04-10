@@ -1,0 +1,60 @@
+﻿@model BlogApp.Models.ArticuloModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<section class="post">
+    <h2>Create</h2>
+
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        @Html.ValidationSummary(true)
+
+        <fieldset>
+            <legend>ArticuloModel</legend>
+
+            <p>
+                @Html.LabelFor(model => model.Titulo)
+                @Html.EditorFor(model => model.Titulo)
+                @Html.ValidationMessageFor(model => model.Titulo)
+            </p>
+
+            <p>
+                @Html.LabelFor(model => model.Fecha)
+                @Html.EditorFor(model => model.Fecha)
+                @Html.ValidationMessageFor(model => model.Fecha)
+            </p>
+
+            <p>
+                @Html.LabelFor(model => model.Imagen)
+                <input type="file" name="Imagen" />
+                @Html.ValidationMessageFor(model => model.Imagen)
+            </p>
+
+            <p>
+                @Html.LabelFor(model => model.Nombre)
+                @Html.EditorFor(model => model.Nombre)
+                @Html.ValidationMessageFor(model => model.Nombre)
+            </p>
+
+            <p>
+                @Html.LabelFor(model => model.Resumen)
+                @Html.EditorFor(model => model.Resumen)
+                @Html.ValidationMessageFor(model => model.Resumen)
+            </p>
+
+            <p>
+                @Html.LabelFor(model => model.Contenido)
+                @Html.EditorFor(model => model.Contenido)
+                @Html.ValidationMessageFor(model => model.Contenido)
+            </p>
+
+            <p>
+                <button type="submit">Create</button>
+                <a href="@Url.Action("Index")" class="btn">Back to List</a>
+            </p>
+        </fieldset>
+    }
+
+</section>

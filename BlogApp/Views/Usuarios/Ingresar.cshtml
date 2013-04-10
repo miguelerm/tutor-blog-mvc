@@ -4,39 +4,34 @@
     ViewBag.Title = "Ingresar";
 }
 
-@using (Html.BeginForm()) {
-    @Html.ValidationSummary(true)
+<section class="post">
+    @using (Html.BeginForm()) {
+        @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend>UsuarioIngresarModelo</legend>
+        <fieldset>
+            <legend>UsuarioIngresarModelo</legend>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Nombre)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Nombre)
-            @Html.ValidationMessageFor(model => model.Nombre)
-        </div>
+            <p>
+                @Html.LabelFor(model => model.Nombre)
+                @Html.EditorFor(model => model.Nombre)
+                @Html.ValidationMessageFor(model => model.Nombre)
+            </p>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Clave)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Clave)
-            @Html.ValidationMessageFor(model => model.Clave)
-        </div>
+            <p>
+                @Html.LabelFor(model => model.Clave)
+                @Html.EditorFor(model => model.Clave)
+                @Html.ValidationMessageFor(model => model.Clave)
+            </p>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Recordarme)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Recordarme)
-            @Html.ValidationMessageFor(model => model.Recordarme)
-        </div>
+            <p>
+                @Html.LabelFor(model => model.Recordarme)
+                @Html.EditorFor(model => model.Recordarme)
+                @Html.ValidationMessageFor(model => model.Recordarme)
+            </p>
 
-        <p>
-            <input type="submit" value="Save" />
-        </p>
-    </fieldset>
-}
-
+            <p>
+                <button type="submit">ingresar</button>
+            </p>
+        </fieldset>
+    }
+</section>

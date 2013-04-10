@@ -3,39 +3,42 @@
 @{
     ViewBag.Title = "Registrarse";
 }
-<h2>Registrarse</h2>
 
-@using (Html.BeginForm())
-{
-     <fieldset>
-        <legend>Datos del usuario</legend>
+<section class="post">
+    <h2>Registrarse</h2>
 
-         @Html.ValidationSummary(false)
+    @using (Html.BeginForm())
+    {
+         <fieldset>
+            <legend>Datos del usuario</legend>
 
-        @*<label>
-            <span>Nombre:</span>
-            <!--<input type="text" name="nombre" value="" />-->
-            @Html.EditorFor(x => x.Nombre)
-            @Html.ValidationMessageFor(x => x.Nombre)
-        </label>
+             @Html.ValidationSummary(false)
+
+            @*<label>
+                <span>Nombre:</span>
+                <!--<input type="text" name="nombre" value="" />-->
+                @Html.EditorFor(x => x.Nombre)
+                @Html.ValidationMessageFor(x => x.Nombre)
+            </label>
         
-        <label>
-            <span>Clave:</span>
-            <!--<input type="text" name="nombre" value="" />-->
-            @Html.EditorFor(x => x.Clave)
-            @Html.ValidationMessageFor(x => x.Clave)
-        </label>
+            <label>
+                <span>Clave:</span>
+                <!--<input type="text" name="nombre" value="" />-->
+                @Html.EditorFor(x => x.Clave)
+                @Html.ValidationMessageFor(x => x.Clave)
+            </label>
 
-        <label>
-            <span>Confirmar la clave:</span>
-            <!--<input type="text" name="nombre" value="" />-->
-            @Html.EditorFor(x => x.Confirmacion)
-            @Html.ValidationMessageFor(x => x.Confirmacion)
-        </label> *@    
+            <label>
+                <span>Confirmar la clave:</span>
+                <!--<input type="text" name="nombre" value="" />-->
+                @Html.EditorFor(x => x.Confirmacion)
+                @Html.ValidationMessageFor(x => x.Confirmacion)
+            </label> *@    
 
-         @Html.EditorForModel()
+             @Html.EditorForModel()
 
-        <button type="submit">Registrarse</button>
+            <button type="submit">Registrarse</button>
 
-    </fieldset>
-}
+        </fieldset>
+    }
+</section>

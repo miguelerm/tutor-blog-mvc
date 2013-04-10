@@ -4,9 +4,9 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace BlogApp.Entidades
+namespace BlogApp.Models
 {
-    public class Articulo
+    public class ArticuloModel
     {
 
         public int Id { get; set; }
@@ -24,20 +24,15 @@ namespace BlogApp.Entidades
         public string Resumen { get; set; }
 
         [Required]
-        [MaxLength]
+        [DataType(DataType.MultilineText)]
         public string Contenido { get; set; }
 
         public DateTime Fecha { get; set; }
 
-        [MaxLength]
-        public byte[] Imagen { get; set; }
+        public HttpPostedFileWrapper Imagen { get; set; }
 
-        public int UsuarioId { get; set; }
-        public Usuario Usuario { get; set; }
+        public int[] Categorias { get; set; }
+        public int[] Etiquetas { get; set; }
 
-        public ICollection<Categoria> Categorias { get; set; }
-        public ICollection<Etiqueta> Etiquetas { get; set; }
-        public ICollection<Comentario> Comentarios { get; set; }
-                
     }
 }
